@@ -11,7 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using WpfAnimatedGif;
 
 namespace Interface
 {
@@ -23,36 +22,6 @@ namespace Interface
         public Interface_login()
         {
             InitializeComponent();
-        }
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.ChangedButton == MouseButton.Left)
-                this.DragMove();
-        }
-
-        private void login_name_GotFocus(object sender, RoutedEventArgs e)
-        {
-            login_name.Text = "";
-            login_name.Foreground = Brushes.White;
-        }
-
-        private void login_name_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (login_name.Text=="")
-            {
-            login_name.Text = "Nom d'utilisateur";
-            login_name.Foreground = Brushes.DimGray;
-            }
-
-        }
-        private void login_Password_GotFocus(object sender, RoutedEventArgs e)
-        {
-            login_Password.Foreground = Brushes.White;
-        }
-
-        private void login_Password_LostFocus(object sender, RoutedEventArgs e)
-        {
-            login_Password.Foreground = Brushes.DimGray;
         }
     }
 }

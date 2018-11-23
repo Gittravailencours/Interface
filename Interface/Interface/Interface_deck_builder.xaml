@@ -118,7 +118,7 @@
                 <ImageBrush ImageSource="assets/cyho_fr004.jpg" />
             </Rectangle.Fill>
         </Rectangle>
-        <Button x:Name="boutonretour" Content=""  Margin="712,36,827,798" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Click="boutonretour_Click" >
+        <Button x:Name="boutonretour" Content=""   Margin="712,36,827,798" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" >
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

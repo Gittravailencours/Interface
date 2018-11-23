@@ -84,11 +84,6 @@ namespace Interface
 
         }
 
-        private void boutonretour_Click(object sender, RoutedEventArgs e)
-        {
-            Interface_login w = new Interface_login();
-            w.Show();
-            this.Close();
-        }
+  
     }
 }
