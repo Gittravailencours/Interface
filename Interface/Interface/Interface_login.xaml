@@ -3,10 +3,119 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Interface"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+
+    xmlns:local="clr-namespace:Interface"
         mc:Ignorable="d"
-        Title="Interface_login" Height="450" Width="800">
+        Title="Interface_login" Height="450" Width="800" Mouse.MouseDown="Window_MouseDown" AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize">
+    <Window.Resources>
+        <Storyboard x:Key="anneau2">
+            <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="rectangle_Copy">
+                <EasingDoubleKeyFrame KeyTime="0:0:5.2" Value="-380"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource anneau2}"/>
+        </EventTrigger>
+    </Window.Triggers>
     <Grid>
-        
+        <Rectangle Stroke="Black">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="assets/bg.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image x:Name="monimage" gif:ImageBehavior.RepeatBehavior="1x" gif:ImageBehavior.AnimatedSource="assets/gif/original.gif" Margin="-10,15,-4,10" OpacityMask="#3F000000" />
+        <Rectangle Stroke="White" Margin="190,117,189,54" RadiusY="3.5" RadiusX="3.5">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#7FFFFFFF"/>
+                    <GradientStop Color="#FF03559B"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+
+        </Rectangle>
+        <Rectangle x:Name="rectangle" Stroke="White" Margin="341,42,336,285" RenderTransformOrigin="0.5,0.5" Fill="#FF03559B" RadiusY="4.5" RadiusX="4.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+        </Rectangle>
+        <Rectangle x:Name="rectangle_Copy" Stroke="Transparent" Margin="360,57,350,303" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-170"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="assets/anneau.png"/>
+            </Rectangle.Fill>
+
+        </Rectangle>
+        <Rectangle x:Name="rectangle1" HorizontalAlignment="Left" Height="37" Margin="386,83,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="37" RenderTransformOrigin="0.5,0.435">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+            <Rectangle.Effect>
+                <DropShadowEffect/>
+            </Rectangle.Effect>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="assets/oeil.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBox x:Name="login_name" Margin="251,171,251,234" LostFocus="login_name_LostFocus" GotFocus="login_name_GotFocus" TextWrapping="Wrap" Text="Nom d'utilisateur"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF9B9B9B" FontFamily="/Interface;component/font/#Yu-Gi-Oh! Matrix Book" FontSize="22" BorderBrush="#00ABADB3" >
+            <TextBox.Background>
+                <ImageBrush ImageSource="assets/item2.png"/>
+            </TextBox.Background>
+        </TextBox>
+        <Button Content="Validé" Margin="346,291,346,119" RenderTransformOrigin="0.544,0.667" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="/Interface;component/font/#Yu-Gi-Oh! Matrix Book" FontSize="18" BorderBrush="#00707070">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.021"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.666"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="assets/item2.png"/>
+            </Button.Background>
+        </Button>
+        <StackPanel Orientation="Horizontal" Margin="280,344,280,75">
+            <Label Content="Mot de passe oublié ?" FontFamily="/Interface;component/font/#Yu-Gi-Oh! Matrix Book" Margin="0,0,0,5" FontWeight="Bold" Foreground="#FFCBCB09"/>
+            <Label Content="Pas encore inscrit ?" FontFamily="/Interface;component/font/#Yu-Gi-Oh! Matrix Book" Margin="0,0,0,5" FontWeight="Bold" Foreground="#FFCBCB09"/>
+        </StackPanel>
+        <PasswordBox x:Name="login_Password" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="251,239,251,166" BorderBrush="#00ABADB3" Foreground="White" FontSize="22">
+            <PasswordBox.Background>
+                <ImageBrush ImageSource="assets/item2.png"/>
+            </PasswordBox.Background>
+        </PasswordBox>
+        <Rectangle HorizontalAlignment="Left" Height="30" Margin="211,248,0,0" RadiusY="1" RadiusX="1" Stroke="Transparent" VerticalAlignment="Top" Width="30">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="assets/key128.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="30" Margin="211,180,0,0" RadiusY="1" RadiusX="1" Stroke="Transparent" VerticalAlignment="Top" Width="30">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="assets/user128.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
+
     </Grid>
 </Window>
