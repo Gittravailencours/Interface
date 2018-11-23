@@ -68,9 +68,6 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="WpfAnimatedGif, Version=1.4.17.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WpfAnimatedGif.1.4.17\lib\net\WpfAnimatedGif.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -128,13 +125,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Resource Include="font\Stone Serif Semibold.ttf" />
-    <Resource Include="font\Yu-Gi-Oh! ITC Stone Serif LT Italic.ttf" />
-    <Resource Include="font\Yu-Gi-Oh! ITC Stone Serif Small Caps Bold.ttf" />
-    <Resource Include="font\Yu-Gi-Oh! Matrix Book.ttf" />
-    <Resource Include="font\Yu-Gi-Oh! Matrix Regular Small Caps 1.ttf" />
-    <Resource Include="font\Yu-Gi-Oh! Matrix Regular Small Caps 2.ttf" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -197,22 +187,6 @@
   <ItemGroup>
     <Resource Include="assets\yugi.png" />
     <Resource Include="assets\kaiba.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="assets\gif\millenium.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="assets\gif\original.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="assets\anneau.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="assets\oeil.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="assets\key128.png" />
-    <Resource Include="assets\user128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

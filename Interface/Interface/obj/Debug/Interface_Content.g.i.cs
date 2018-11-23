@@ -8,7 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/key128.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/user128.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/yu_gi_oh__duel_monsters_kaiba_seto__render__by_raidengtx-dberoz5.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/yu_gi_oh__duel_monsters_yami_yugi__atem___render__by_raidengtx-db6swvx.png" +
+    "")]
 
 
